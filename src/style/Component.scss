@@ -1,0 +1,341 @@
+$red-color: #ec3323;
+$dark-color: #2b2b2b;
+$black-color: #191919;
+$white-color: #ffffff;
+$light-color: #e0e3e7;
+$accent-color: #e6e9ec;
+
+$font-primary: "Nunito Sans", sans-serif;
+$font-secondary: Goldener;
+
+$box-shadow: 0px 0px 0px 1px rgba(255, 255, 255, 0.44);
+$transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+
+// Header
+.header {
+    width: 100%;
+    cursor: default;
+    position: relative;
+
+    .top {
+        width: 100%;
+        position: relative;
+        background: $dark-color;
+
+        .content {
+            width: 80%;
+            display: flex;
+            margin: 0 auto;
+            align-items: center;
+            justify-content: space-between;
+
+            .left {
+                left: 0;
+                top: 0;
+                height: 120%;
+                padding-left: 10%;
+                position: absolute;
+                background: $red-color;
+                font-family: $font-primary;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+
+                // &::after{
+                //     content: "";
+                //     position: absolute;
+                //     top: 0;
+                //     left: 7%;
+                //     height: 100%;
+                //     width: 100%;
+                //     background: inherit;
+                //     transform: skewX(45deg);
+                // }
+
+                p {
+                    position: relative;
+                    color: $white-color;
+                    padding: 0 1rem 0 0;
+                    display: flex;
+                    z-index: 1;
+                }
+            }
+
+            .right {
+                margin-left: auto;
+
+                ul {
+                    display: flex;
+                    align-items: center;
+
+                    li {
+                        a {
+                            display: flex;
+                            padding: 1rem;
+                            font-size: 1.2rem;
+                            color: $light-color;
+
+                            &:hover {
+                                color: $white-color;
+                                background: $red-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .main {
+        width: 100%;
+        position: relative;
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .mid {
+                gap: 2rem;
+                display: flex;
+                align-items: center;
+                color: $dark-color;
+
+                .location,
+                .day {
+                    gap: 0.6rem;
+                    display: flex;
+                    align-items: center;
+                    padding: 1rem 0;
+
+                    .text {
+                        line-height: 1.1;
+
+                        h3 {
+                            font-size: 14px;
+                            font-family: $font-secondary;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            font-family: $font-primary;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                gap: 1rem;
+                display: flex;
+                align-items: center;
+                color: $dark-color;
+                background: $red-color;
+                text-transform: lowercase;
+                text-align: left;
+
+                .text {
+                    line-height: 1.2;
+                    color: $white-color;
+
+                    h3 {
+                        font-size: 16px;
+                        font-family: $font-secondary;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        font-family: $font-primary;
+                    }
+                }
+            }
+        }
+    }
+
+    .navbar {
+        width: 100%;
+        position: relative;
+        background: $black-color;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            position: absolute;
+            top: -3rem;
+            width: 7rem;
+            display: flex;
+            height: fit-content;
+            align-items: center;
+            padding: 0 0 0.5rem 0;
+            background: $white-color;
+            justify-content: center;
+
+            img {
+                width: 6rem;
+                height: auto;
+            }
+        }
+
+        .nav {
+            position: relative;
+
+            ul {
+                // gap: 1rem;
+                display: flex;
+                align-items: center;
+                font-family: $font-primary;
+
+                a {
+                    font-weight: 600;
+                    color: $white-color;
+                    font-size: 0.9rem;
+                    padding: 1rem;
+                    display: flex;
+                    position: relative;
+                    text-transform: uppercase;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        bottom: 0;
+                        transform: scaley(0);
+                        transition: $transition;
+                        transform-origin: bottom;
+                        background-color: $red-color;
+                    }
+
+                    span {
+                        position: relative;
+                    }
+
+                    &:hover {
+                        color: $accent-color;
+                        position: relative;
+
+                        &::before {
+                            transform: scaley(1);
+                            transform-origin: bottom;
+                        }
+                    }
+
+                    &.active {
+                        color: $accent-color;
+                        background: $red-color;
+                    }
+                }
+            }
+        }
+
+        .menu {
+            position: relative;
+
+            button {
+                background: none;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 30px;
+                height: 24px;
+                padding: 0;
+                z-index: 10;
+                position: relative;
+
+                span {
+                    width: 100%;
+                    height: 3px;
+                    background-color: $white-color; // or your desired color
+                    border-radius: 5px;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                .bar1 {
+                    transform-origin: top left;
+                }
+
+                .bar2 {
+                    opacity: 1;
+                    transition: opacity 0.3s ease-in-out;
+                }
+
+                .bar3 {
+                    transform-origin: bottom left;
+                }
+
+                // When the menu is active, add transformations
+                &.active .bar1 {
+                    transform: rotate(45deg) translate(-2px, 2px);
+                }
+
+                &.active .bar2 {
+                    opacity: 0;
+                }
+
+                &.active .bar3 {
+                    transform: rotate(-45deg) translate(-5px, 1px);
+                }
+            }
+        }
+    }
+
+    .menu-modal {
+        background: $light-color;
+        width: 100%;
+        position: fixed;
+        max-width: 250px;
+        right: 10%;
+        top: inherit;
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+
+            ul {
+                width: 100%;
+                position: relative;
+                font-family: $font-primary;
+
+                li {
+                    a {
+                        display: block;
+                        padding: 0.4rem 1rem;
+                        color: $dark-color;
+                        font-weight: 600;
+
+                        &:hover {
+                            color: $white-color;
+                            background: $red-color;
+                        }
+                    }
+
+                    &:first-child {
+                        a {
+                            padding: 1rem 1rem 0.4rem 1rem;
+                        }
+                    }
+
+                    &:last-child {
+                        a {
+                            padding: 0.4rem 1rem 1rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
