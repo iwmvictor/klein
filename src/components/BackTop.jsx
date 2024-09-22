@@ -3,9 +3,9 @@ import React from "react";
 function BackTop() {
   return (
     <>
-      <div class="progress-wrap cursor-pointer">
+      <div className="progress-wrap cursor-pointer">
         <svg
-          class="progress-circle svg-content"
+          className="progress-circle svg-content"
           width="100%"
           height="100%"
           viewBox="-1 -1 102 102"

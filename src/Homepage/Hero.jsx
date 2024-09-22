@@ -2,9 +2,10 @@ import React, { useState, useEffect } from "react";
 
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
-import hero1 from "./../assets/images/hero/hero1.png";
-import hero2 from "./../assets/images/hero/hero2.png";
-import hero3 from "./../assets/images/hero/promo_bg.jpg";
+import hero1 from "./../assets/images/hero/hero1.jpg";
+import hero2 from "./../assets/images/hero/hero2.jpg";
+import hero3 from "./../assets/images/hero/hero3.jpg";
+import hero4 from "./../assets/images/hero/hero4.jpg";
 
 function Hero() {
   const images = [hero1, hero2, hero3];
@@ -41,6 +42,8 @@ function Hero() {
             className={`slide ${index === currentIndex ? "active" : ""}`}
             style={{ backgroundImage: `url(${image})` }}
           >
+            <div className="overlay"></div>
+
             {index === currentIndex && (
               <div className="hero-text">
                 <h1>Rent Your Dream Car</h1>
@@ -53,7 +56,6 @@ function Hero() {
           </div>
         ))}
 
-        {/* Navigation buttons */}
         <div className="navbtn">
           <button className="prev" onClick={prevSlide}>
             <FaArrowLeftLong />
