@@ -78,9 +78,9 @@ const Service = () => {
           </div>
           <div className="right">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit,
-              dignissimos. Architecto velit, inventore vel voluptatem quisquam
-              voluptates.
+              Klein Transports & Tours, well known for our exceptional car
+              rental and travels and tours experience we delive while serving
+              our clients in all sectors of the industry.
             </p>
           </div>
         </div>

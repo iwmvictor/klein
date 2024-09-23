@@ -169,7 +169,8 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
                 transition: $transition;
 
                 .single-service {
-                    flex: 0 0 calc(100% / 3); // Default to show 3 items, adjust with media queries
+                    flex: 1 0 calc(100% / 3); // Default to show 3 items
+                    width: 100%;
                     padding: 4rem 2rem 2rem 2rem;
                     position: relative;
                     background: white;
@@ -208,6 +209,16 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
                             line-height: 1.5;
                         }
                     }
+
+                    @media (max-width: 1024px) {
+                        flex: 1 0 calc(100% / 2);
+                        max-width: calc(100% / 2 - 1rem);
+                    }
+
+                    @media (max-width: 768px) {
+                        flex: 1 0 100%;
+                        max-width: 100%;
+                    }
                 }
             }
 
@@ -234,17 +245,7 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
         }
     }
 
-    @media (max-width: 1024px) {
-        .carousel .single-service {
-            flex: 0 0 calc(100% / 2); // Show 2 items
-        }
-    }
-
-    @media (max-width: 768px) {
-        .carousel .single-service {
-            flex: 0 0 100%; // Show 1 item
-        }
-    }
+    
 
     .cta {
         width: 100%;
@@ -477,8 +478,8 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
 
                 .close-icon {
                     position: absolute;
-                    top: 0rem;
-                    right: 0rem;
+                    bottom: 0;
+                    right: 1rem;
                     padding: 0.6rem;
                     display: flex;
                     font-size: 1rem;
@@ -665,7 +666,7 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
                 padding: 2rem 2rem 2rem 6rem;
                 border: 1px dotted $blue-color;
 
-                .number{
+                .number {
                     position: absolute;
                     bottom: 2rem;
                     left: 1rem;
@@ -676,7 +677,7 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
                     font-family: $font-secondary;
                 }
 
-                &:hover{
+                &:hover {
                     border-style: solid;
                     background: white;
                 }
@@ -686,15 +687,15 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
                 padding: 1rem;
                 grid-template-columns: 1fr;
 
-                .box{
+                .box {
                     padding: 2rem;
 
-                    .number{
+                    .number {
                         position: relative;
                         font-size: 2rem;
                         top: 0;
                         left: 0;
-                        opacity: .6;
+                        opacity: 0.6;
                         text-shadow: none;
                         margin-bottom: 2rem;
                         color: $blue-color;
@@ -702,8 +703,8 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
                 }
             }
 
-            @media (max-width:450px) {
-                .box{
+            @media (max-width: 450px) {
+                .box {
                     max-width: 100%;
                 }
             }
