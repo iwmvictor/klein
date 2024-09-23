@@ -12,11 +12,13 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
 
 .header {
     width: 100%;
+    height: 4rem;
     cursor: default;
     position: fixed;
     z-index: 9999;
+    display: flex;
+    align-items: center;
     background: $cream-color;
-
 
     .content {
         width: 100%;
@@ -28,7 +30,7 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
             position: absolute;
             display: flex;
             top: 0;
-            padding: .44rem;
+            padding: 0.44rem;
             height: fit-content;
             align-items: center;
             background: $cream-color;
@@ -91,6 +93,10 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
                     }
                 }
             }
+
+            @media (max-width: 850px) {
+                display: none;
+            }
         }
 
         .menu {
@@ -143,6 +149,268 @@ $transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
                     transform: rotate(-45deg) translate(-5px, 1px);
                 }
             }
+        }
+    }
+
+    .menu-modal {
+        background: $cream-color;
+        box-shadow: 0 0;
+        width: 100%;
+        position: fixed;
+        max-width: 250px;
+        right: 10%;
+        top: inherit;
+
+        .modal-content {
+            position: relative;
+            width: 100%;
+
+            ul {
+                width: 100%;
+                position: relative;
+                font-family: $font-primary;
+
+                li {
+                    a {
+                        display: block;
+                        padding: 0.4rem 1rem;
+                        color: $dark-color;
+                        font-weight: 600;
+
+                        &:hover {
+                            color: $cream-color;
+                            background: $blue-color;
+                        }
+                    }
+
+                    &:first-child {
+                        a {
+                            padding: 1rem 1rem 0.4rem 1rem;
+                        }
+                    }
+
+                    &:last-child {
+                        a {
+                            padding: 0.4rem 1rem 1rem 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    position: relative;
+    color: $cream-color;
+    font-family: $font-primary;
+    background: darken($blue-color, $amount: 6);
+
+    .main {
+        width: 100%;
+        position: relative;
+
+        .content {
+            gap: 1rem;
+            display: grid;
+            padding: 6rem 0 2rem 0;
+            align-content: center;
+            justify-content: center;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+            .company {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                img {
+                    width: 100%;
+                    max-width: 200px;
+                    height: auto;
+                }
+
+                h2 {
+                    margin: 2rem 0 1rem 0;
+                    display: block;
+                    padding: 1rem 0;
+                    font-weight: 800;
+                    position: relative;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        bottom: 0;
+                        transform: scaleX(0.3);
+                        transform-origin: left;
+                        background: $blue-color;
+                        transition: $transition;
+                    }
+                }
+
+                p {
+                    line-height: 1.2;
+                    opacity: 0.8;
+                }
+            }
+
+            .contact {
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+
+                h3 {
+                    padding: 0.4rem 0;
+                    display: block;
+                    position: relative;
+                    margin-bottom: 2rem;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 0.15rem;
+                        background: $blue-color;
+                        transform: scaleX(0.3);
+                        transform-origin: left;
+                        transition: $transition;
+                    }
+                }
+
+                ul {
+                    li {
+                        a {
+                            gap: 0.6rem;
+                            display: flex;
+                            align-items: center;
+                            color: $cream-color;
+                            position: relative;
+
+                            span {
+                                display: flex;
+                            }
+
+                            &:hover {
+                                opacity: 0.6;
+                                padding-left: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .form {
+                width: 100%;
+                position: relative;
+
+                h3 {
+                    padding: 0.4rem 0;
+                    display: block;
+                    position: relative;
+                    margin-bottom: 2rem;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        height: 0.15rem;
+                        background: $blue-color;
+                        transform: scaleX(0.3);
+                        transform-origin: left;
+                        transition: $transition;
+                    }
+                }
+
+                form {
+                    gap: 0.6rem;
+                    display: grid;
+                    align-items: center;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+                    .input {
+                        width: 100%;
+                        position: relative;
+
+                        input,
+                        select,
+                        textarea {
+                            width: 100%;
+                            background: transparent;
+                            border: 1px dashed $blue-color;
+                            font-size: 1rem;
+                            outline: none;
+                            padding: 0.6rem 1rem;
+                            position: relative;
+                            color: $cream-color;
+                            transition: $transition;
+
+                            &:hover {
+                                border-style: solid;
+                                background: lighten($blue-color, $amount: 1);
+                            }
+
+                            &:focus {
+                                border-style: solid;
+                                border-color: $cream-color;
+                            }
+                        }
+
+                        button {
+                            padding: 0.6rem 2rem;
+                            font-weight: 900;
+                            border-color: $cream-color;
+
+                            &::before,
+                            &::after {
+                                border-color: $cream-color;
+                            }
+
+                            &:hover {
+                                color: $blue-color;
+                                background: $cream-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &:hover {
+                .company {
+                    h2 {
+                        &::before {
+                            transform: scaleX(0.87);
+                        }
+                    }
+                }
+
+                .contact,
+                .form {
+                    h3 {
+                        &::before {
+                            transform: scaleX(0.51);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom {
+        width: 100%;
+        position: relative;
+        background: darken($blue-color, $amount: 10);
+
+        p {
+            color: $cream-color;
+            display: block;
+            font-size: 1rem;
+            padding: 1rem 0 2rem 0;
         }
     }
 }

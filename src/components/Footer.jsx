@@ -10,94 +10,124 @@ import {
 } from "react-icons/fa6";
 
 import "./../style/Component.scss";
+import logo from "./../assets/images/brand/logo-light.svg";
 
 function Footer() {
   const year = new Date().getFullYear();
 
   return (
     <>
-    footer
-      {/* <div className="footer">
-        <div className="top">
+      <div className="footer">
+        <div className="main">
           <div className="container">
             <div className="content">
+              <div className="company">
+                <img src={logo} alt="Klein Logo" />
+                <h2>Klein Transports & Tours</h2>
+                <p>
+                  Experience the thrill of the open road and the freedom to
+                  explore our diverse range of top-quality rental vehicles
+                </p>
+              </div>
               <div className="contact">
-                <div className="grid">
-                  <div className="icon">
-                    <FaPhone />
-                  </div>
-                  <div className="text">
-                    <span>Call us</span>
-                    <a href="tel:250789596504">+250 789 596 504</a>
-                  </div>
-                </div>
-                <div className="grid">
-                  <div className="icon">
-                    <FaEnvelope />
-                  </div>
-                  <div className="text">
-                    <span>Write to us</span>
-                    <a href="mailto:joshmugs22@gmail.com">
-                      joshmugs22@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <div className="grid">
-                  <div className="icon">
-                    <IoLocation />
-                  </div>
-                  <div className="text">
-                    <span>Address</span>
-                    <a>Kigali, Rwanda</a>
-                  </div>
+                <div>
+                  <h3>Get In Touch</h3>
+                  <ul>
+                    <li>
+                      <a href="tel:250789596504">
+                        <span>
+                          <FaPhone />
+                        </span>
+                        <span>+250 78 9596 504</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:joshmugs22@gmail.com">
+                        <span>
+                          <FaEnvelope />
+                        </span>
+                        <span>joshmugs22@gmail.com</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://wa.me/250789596504e">
+                        <span>
+                          <FaWhatsapp />
+                        </span>
+                        <span>WhatsApp</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://instagram.com/klein_transports_tours">
+                        <span>
+                          <FaInstagram />
+                        </span>
+                        <span>Instagram</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span>
+                          <FaXTwitter />
+                        </span>
+                        <span>Twitter</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="">
+                        <span>
+                          <FaTiktok />
+                        </span>
+                        <span>TikTok</span>
+                      </a>
+                    </li>
+                  </ul>
                 </div>
               </div>
-              <div className="div">
-                <div className="logo"></div>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
-                  illo, obcaecati accusantium suscipit rerum ut sit doloremque
-                  officiis asperiores. In voluptate quia at odit, et amet
-                  voluptatum commodi perferendis consequatur.
-                </p>
-                <div className="socials">
-                  <div className="icon whatsapp">
-                    <span className="tooltip">WhatsApp</span>
-                    <span>
-                      <FaWhatsapp />
-                    </span>
+              <div className="form">
+                <h3>Quick Booking Form</h3>
+                <form>
+                  <div className="input">
+                    <input
+                      type="text"
+                      name=""
+                      required
+                      placeholder="Fullnames"
+                    />
                   </div>
-                  <div className="icon instagram">
-                    <span className="tooltip">Instagram</span>
-                    <span>
-                      <FaInstagram />
-                    </span>
+                  <div className="input">
+                    <input type="tel" name="" required placeholder="Phone " />
                   </div>
-                  <div className="icon twitter">
-                    <span className="tooltip">Twitter</span>
-                    <span>
-                      <FaXTwitter />
-                    </span>
+                  <div className="input">
+                    <input type="email" name="" placeholder="Email" />
                   </div>
-                  <div className="icon tiktok">
-                    <span className="tooltip">TikTok</span>
-                    <span>
-                      <FaTiktok />
-                    </span>
+                  <div className="input">
+                    <select name="" id="">
+                      <option value="rental">Car Rental</option>
+                      <option value="tours">Tours & Travel</option>
+                    </select>
                   </div>
-                </div>
+                  <div className="input">
+                    <textarea
+                      name=""
+                      placeholder="What else would you like us to know?"
+                    ></textarea>
+                  </div>
+                  <div className="input">
+                    <button className="btn">Submit</button>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
         </div>
+
         <div className="bottom">
           <div className="container">
-            <div className="content">
-              <p>&copy; {year} Klein. All rights reserved</p>
-            </div>
+            <p>&copy; Copyright {year} — Klein Transports & Tours</p>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
