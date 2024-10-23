@@ -13,10 +13,10 @@ function Home() {
     <>
       <div className="homepage">
         <Hero />
-        <Service />
+        <Service id="services" />
         <Cta />
         <Cars />
-        <Destination />
+        <Destination is="destinations" />
         <About />
       </div>
     </>

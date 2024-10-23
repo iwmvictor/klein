@@ -1,29 +1,30 @@
 import React from "react";
 
+// Updated reasons for choosing the car rental and tour company
 const reasons = [
   {
     count: "01",
-    title: "Financing Made Easy",
+    title: "Wide Range of Vehicles",
     description:
-      "Our stress-free finance department that can find financial solutions to save you money.",
+      "From luxury sedans to rugged SUVs, we offer a diverse selection of vehicles to suit any journey.",
   },
   {
     count: "02",
-    title: "Deals in All Brands",
+    title: "Tailored Tour Packages",
     description:
-      "Our stress-free finance department that can find financial solutions to save you money.",
+      "Explore Rwanda with personalized tour packages designed to meet your unique travel interests.",
   },
   {
     count: "03",
-    title: "Deals for Every Budget",
+    title: "Affordable Pricing & Transparent Rates",
     description:
-      "Discover a range of options tailored to fit any budget, making luxury accessible for everyone.",
+      "Enjoy competitive pricing with no hidden fees. We make luxury and comfort accessible to all.",
   },
   {
     count: "04",
-    title: "24/7 Support",
+    title: "Expert Local Guides",
     description:
-      "We're here for you around the clock, ensuring a seamless experience anytime you need us.",
+      "Our experienced local guides ensure that you experience the true beauty and culture of Rwanda.",
   },
 ];
 
@@ -34,12 +35,13 @@ function About() {
         <div className="container">
           <div className="heading">
             <div>
-              <h2>Why choose us</h2>
+              <h2>Why Choose Us</h2>
             </div>
             <div>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem
-                assumenda optio officiis aut! Nulla dignissimos tenetur debitis
+                We are committed to providing top-notch car rental services and
+                unforgettable tour experiences in Rwanda. We
+                ensure a seamless and enjoyable journey.
               </p>
             </div>
           </div>

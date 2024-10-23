@@ -1,5 +1,4 @@
-import React from "react";
-import { IoLocation } from "react-icons/io5";
+import React, { useState } from "react";
 import {
   FaInstagram,
   FaTiktok,
@@ -13,7 +12,34 @@ import "./../style/Component.scss";
 import logo from "./../assets/images/brand/logo-light.svg";
 
 function Footer() {
+  const [formData, setFormData] = useState({
+    fullName: "",
+    phone: "",
+    email: "",
+    service: "rental",
+    message: "",
+  });
+
   const year = new Date().getFullYear();
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // WhatsApp number to send the message
+    const phoneNumber = "250789596504";
+
+    // Formatting message to send via WhatsApp
+    const whatsappMessage = `Full Name: ${formData.fullName}%0APhone: ${formData.phone}%0AEmail: ${formData.email}%0AService: ${formData.service === "rental" ? "Car Rental" : "Tours & Travel"}%0AMessage: ${formData.message}`;
+
+    // Open WhatsApp with the pre-filled message
+    window.open(
+      `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`
+    );
+  };
 
   return (
     <>
@@ -50,7 +76,7 @@ function Footer() {
                       </a>
                     </li>
                     <li>
-                      <a href="https://wa.me/250789596504e">
+                      <a href="https://wa.me/250789596504">
                         <span>
                           <FaWhatsapp />
                         </span>
@@ -86,35 +112,58 @@ function Footer() {
               </div>
               <div className="form">
                 <h3>Quick Booking Form</h3>
-                <form>
+                <form onSubmit={handleSubmit}>
                   <div className="input">
                     <input
                       type="text"
-                      name=""
+                      name="fullName"
                       required
                       placeholder="Fullnames"
+                      value={formData.fullName}
+                      onChange={handleChange}
                     />
                   </div>
                   <div className="input">
-                    <input type="tel" name="" required placeholder="Phone " />
+                    <input
+                      type="tel"
+                      name="phone"
+                      required
+                      placeholder="Phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div className="input">
-                    <input type="email" name="" placeholder="Email" />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
                   </div>
                   <div className="input">
-                    <select name="" id="">
+                    <select
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                    >
                       <option value="rental">Car Rental</option>
                       <option value="tours">Tours & Travel</option>
                     </select>
                   </div>
                   <div className="input">
                     <textarea
-                      name=""
+                      name="message"
                       placeholder="What else would you like us to know?"
+                      value={formData.message}
+                      onChange={handleChange}
                     ></textarea>
                   </div>
                   <div className="input">
-                    <button className="btn">Submit</button>
+                    <button type="submit" className="btn">
+                      Submit
+                    </button>
                   </div>
                 </form>
               </div>

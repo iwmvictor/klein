@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 
 import hero1 from "./../assets/images/hero/hero1.jpg";
@@ -33,6 +32,13 @@ function Hero() {
     );
   };
 
+  // WhatsApp contact
+  const handleWhatsAppClick = () => {
+    const whatsappUrl =
+      "https://wa.me/250789596504?text=Hi%2C%20am%20interested%20in%20your%20services";
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="hero">
       <div className="hero-slider">
@@ -50,7 +56,10 @@ function Hero() {
                 <p>
                   Discover our amazing collection of cars and drive in style.
                 </p>
-                <button className="btn">Book Now</button>
+                {/* 'Book Now' button opens WhatsApp with a pre-filled message */}
+                <button className="btn" onClick={handleWhatsAppClick}>
+                  Book Now
+                </button>
               </div>
             )}
           </div>
@@ -65,28 +74,6 @@ function Hero() {
           </button>
         </div>
       </div>
-
-      {/* <div className="book">
-        <div className="thumbnail">
-          <img src={hero1} alt="Car Thumbnail" />
-          <div className="overlay">
-            <h3>Search Your Best Cars here.</h3>
-          </div>
-        </div>
-        <div className="form">
-          <div className="input-group">
-            <input type="text" placeholder="From Address" />
-            <input type="text" placeholder="To Address" />
-            <select>
-              <option>Select</option>
-            </select>
-            <input type="date" placeholder="Journey Date" />
-            <input type="time" placeholder="Journey Time" />
-
-            <button className="btn">FIND CAR</button>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

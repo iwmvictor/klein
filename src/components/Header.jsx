@@ -27,7 +27,7 @@ function Header() {
               <ul>
                 <li>
                   <a
-                    href="/#services"
+                    href="#services"
                     className={
                       location.pathname === "/#services" ? "active" : ""
                     }

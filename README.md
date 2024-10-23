@@ -5,7 +5,7 @@ Phone: +250789596504
 Email: [joshmugs22@gmail.com](mailto:joshmugs22@gmail.com)
 Website: https://kleins.vercel.app
 
-[preview the website](./public/preview.png)
+![preview the website](./public/preview.png)
 
 ```Klein Transports & Tours offers a range of services, including airport transfers, private car and driver
 services, and group tours. They have a fleet of modern vehicles and experienced drivers to ensure a safe
