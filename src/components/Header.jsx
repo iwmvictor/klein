@@ -88,22 +88,22 @@ function Header() {
                   </a>
                 </li>
                 <li>
-                  <a href="/about" onClick={toggleMenuModal}>
+                  <a href="/#about" onClick={toggleMenuModal}>
                     About
                   </a>
                 </li>
                 <li>
-                  <a href="/services" onClick={toggleMenuModal}>
+                  <a href="/#services" onClick={toggleMenuModal}>
                     Services
                   </a>
                 </li>
                 <li>
-                  <a href="/gallery" onClick={toggleMenuModal}>
+                  <a href="/#gallery" onClick={toggleMenuModal}>
                     Gallery
                   </a>
                 </li>
                 <li>
-                  <a href="/contact" onClick={toggleMenuModal}>
+                  <a href="/#contact" onClick={toggleMenuModal}>
                     Contact
                   </a>
                 </li>
