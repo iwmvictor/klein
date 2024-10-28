@@ -75,6 +75,8 @@ function Whatsapp() {
                   </option>
                   <option value="car">Car Rental</option>
                   <option value="tour">Tours and Travel</option>
+                  <option value="airport">Airport Transfer</option>
+                  <option value="chauffer">Private Chauffers</option>
                 </select>
               </div>
               <div className="input">
